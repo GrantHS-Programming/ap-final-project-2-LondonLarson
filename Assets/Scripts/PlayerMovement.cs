@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D rb2D;
 
@@ -27,12 +27,12 @@ public class PlayerController : MonoBehaviour
     }
     void FixedUpdate()
     {
-        if (moveHorizontal > 0.1f || moveHorizontal < -0.1f)
+        if (moveHorizontal > 0f || moveHorizontal < 0f)
         {
             rb2D.AddForce(new Vector2(moveHorizontal * moveSpeed, 0f),ForceMode2D.Impulse);
         }
 
-        if (!isJumping && moveVertical > 0.1f)
+        if (!isJumping && moveVertical > 0f)
         {
             rb2D.AddForce(new Vector2(0f, moveVertical * jumpForce), ForceMode2D.Impulse);
         }
