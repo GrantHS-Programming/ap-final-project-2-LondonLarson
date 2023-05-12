@@ -12,6 +12,5 @@ public class CameraMovement : MonoBehaviour
 
     void LateUpdate()
     {
-        camera.SetRotation(0);
     }
 }

@@ -16,10 +16,9 @@ public class PlayerMovement : MonoBehaviour
         rb2D = gameObject.GetComponent<Rigidbody2D>();
         jumpForce = 20;
         isJumping = false;
-        moveSpeed = 2;
+        moveSpeed = .5f;
     }
 
-    // Update is called once per frame
     void Update()
     {
         moveHorizontal = Input.GetAxisRaw("Horizontal");
