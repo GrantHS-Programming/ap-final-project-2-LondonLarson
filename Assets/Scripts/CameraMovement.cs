@@ -12,5 +12,6 @@ public class CameraMovement : MonoBehaviour
 
     void LateUpdate()
     {
+        transform.rotation = Quaternion.identity;
     }
 }
