@@ -38,14 +38,14 @@ public class PlayerMovement : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D Collision)
     {
-        if (Collision.gameObject.tag == "Platform")
+        if (Collision.gameObject.tag == "Platform" || Collision.gameObject.tag == "Ground")
         {
             isJumping = false;
         }
     }
     void OnTriggerExit2D(Collider2D Collision)
     {
-        if (Collision.gameObject.tag == "Platform")
+        if (Collision.gameObject.tag == "Platform" || Collision.gameObject.tag == "Ground" )
         {
             isJumping = true;
         }
